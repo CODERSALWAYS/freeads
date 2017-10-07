@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Add student</title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+</head>
+<body>
+	<form action="/student/updatedata" method="post" class="form-inline" style="margin-top: 25px; margin-left: 15px;">
+		<label for="">S_ID :</label> <input type="number" class="form-control form-inline" id="id" name="id" value="<%= data[0].ID %>">
+		<label for="">	FIRSTNAME : </label><input type="text" class="form-control"  id="FIRSTNAME" name="fname" value="<%= data[0].FIRSTNAME %>">
+		<label for="">LASTNAME : </label><input type="text" class="form-control" id="LASTNAME" name="lname" value="<%= data[0].LASTNAME %>">
+		<label for="">ADDRESS :</label> <input type="text" class="form-control" id="ADDRESS" name="address" value="<%= data[0].ADDRESS %>">
+
+		<input type="submit"  value="update" class="btn btn-success">
+
+	</form>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>StateList</title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	
+</head>
+<body>
+<div class="container">
+<a href="/student/add" style="margin-top: 5px;" type="button" class="btn btn-success    btn-lg btn-block" id="btn">Add State</a>
+<br>
+<table class="table table-striped">
+	<tr style="background-color: grey;">
+		<th>STATEID</th>
+		<th>STATENAME</th>
+		<th>CREATIONDATE</th>
+		<th>UPDATIONDATE</th>
+		<th></th>
+		<th></th>
+	</tr>
+	<% for(var i=0; i< data.length; i++) {%>
+	<tr>
+		<td><%= data[i].STATEID %></td>
+		<td><%= data[i].STATENAME %></td>
+		<td><%= data[i].CREATIONDATE %></td>
+		<td><%= data[i].UPDATIONDATE %></td>
+		<td><a href="/student/update?studentid=<%= data[i].ID %>" data-toggle="tooltip" title="edit" id="edit"><span class="glyphicon glyphicon-edit">Edit</span></a></td>
+		<td><a href="/student/delete?studentid=<%= data[i].ID %>" data-toggle="tooltip" title="delete"><span class="glyphicon glyphicon-trash"></span></a></td>
+	</tr>
+	<% } %>
+</table>
+</div>
+<script>
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();
+		$('[data-toggle="tooltip"]').tooltip();
+
+	});
+</script>
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.js"></script>
+</body>
+</html>
